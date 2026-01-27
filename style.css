@@ -70,6 +70,52 @@ body {
     color: #fff;
 }
 
+/* Dropdown Menu Stilleri */
+.navbar nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #252525;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;
+    /* Linkin tam altında başlasın */
+    left: 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #ccc;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Oku */
+.dropdown-arrow::after {
+    content: " ▼";
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
 /* Sayfa Başlığı */
 h1 {
     text-align: center;
@@ -467,9 +513,32 @@ footer {
 /* --- MOBİL UYUM İÇİN BUTON KONUMU --- */
 @media (max-width: 1050px) {
     #global-zoom-button {
-        right: 10px;
-        top: 20px;
+        position: fixed;
+        /* Sabit pozisyon */
+        right: 20px;
+        bottom: 20px;
+        /* Altta */
+        top: auto;
+        /* Üst ayarını sıfırla */
         margin-right: 0;
+
+        background-color: #fff;
+        /* Göze çarpan arka plan */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        /* Gölge */
+        padding: 10px;
+        border-radius: 50%;
+        /* Tam yuvarlak */
+        z-index: 9999;
+        /* En üstte */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #global-zoom-button img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -577,18 +646,38 @@ footer {
     }
 }
 
-/* --- ORTA ÇİZGİ İSTEK ÜZERİNE KALDIRILDI --- */
-/*
-.flipbook-wrapper::after {
-    content: ''; 
-    position: absolute; 
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px; 
-    background-color: #333; 
-    transform: translateX(-50%);
-    z-index: 999;
-    pointer-events: none; 
+/* --- MOBILE ZOOM BUTTON FIX --- */
+#mobile-zoom-button {
+    display: none;
 }
-*/
+
+@media (max-width: 1050px) {
+    #global-zoom-button {
+        display: none !important;
+    }
+
+    #mobile-zoom-button {
+        position: fixed;
+        left: 20px;
+        /* Solda olsun */
+        right: auto;
+        bottom: 20px;
+
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Koyu arka plan (beyaz ikon için) */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 99999;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+    #mobile-zoom-button img {
+        width: 30px;
+        height: 30px;
+        display: block;
+    }
+}

@@ -26,6 +26,14 @@
                 <ul>
                     <li><a href="iletisim_en.html">Contact</a></li>
                     <li><a href="flipbook_en.html">Portfolio</a></li>
+                    <li>
+                        <a href="360_view_en.html?project=salon" class="dropdown-arrow">360 View</a>
+                        <div class="dropdown-content">
+                            <a href="360_view_en.html?project=salon">Modern Living Room</a>
+                            <a href="360_view_en.html?project=bedroom">Bedroom</a>
+                            <a href="360_view_en.html?project=kitchen">Kitchen</a>
+                        </div>
+                    </li>
                 </ul>
 
                 <ul class="lang-switcher">
@@ -233,6 +241,10 @@
 
     </main>
 
+    <button id="mobile-zoom-button" style="display:none;" onclick="if(window.openZoom) window.openZoom()">
+        <img src="icons/zoom.png" alt="Zoom In">
+    </button>
+
 
     <footer>
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
@@ -356,11 +368,8 @@
                 resizeTimer = setTimeout(setupFlipbook, 250);
             });
 
-            // 7. GENEL BÜYÜTME İŞLEVİ
-            globalZoomBtn.on('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-
+            // 7. GENEL BÜYÜTME İŞLEVİ (Fonksiyon olarak ayrıldı)
+            function openZoom() {
                 var currentPageDiv = flipbook.turn('page');
                 var view = flipbook.turn('view', currentPageDiv);
                 var pageIndex = view.pop() || view.pop();
@@ -372,7 +381,28 @@
                     updateLightboxImage(pageIndex);
                     $(".flipbook").turn("disable", true);
                 }
+            }
+            window.openZoom = openZoom; // Global accessible
+
+            globalZoomBtn.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openZoom();
             });
+
+            // *** YENİ: MOBİL ZOOM BUTONU İÇİN TIKLAMA OLAYI ***
+            $("#mobile-zoom-button").on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openZoom();
+            });
+
+            // *** MOBİL İÇİN RESME TIKLAYINCA BÜYÜTME ***
+            if ($(window).width() < 768) {
+                $(".flipbook").on("click", "img", function (e) {
+                    openZoom();
+                });
+            }
 
             // 8. LIGHTBOX NAVİGASYON İŞLEVİ
             lightboxPrevBtn.on('click', function (e) {

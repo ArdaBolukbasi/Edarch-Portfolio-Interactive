@@ -25,6 +25,14 @@
             <ul>
                 <li><a href="iletisim.html">İletişim</a></li>
                 <li><a href="index.html">Portfolyo</a></li>
+                <li>
+                    <a href="360_view.html?project=salon" class="dropdown-arrow">360 Görünüm</a>
+                    <div class="dropdown-content">
+                        <a href="360_view.html?project=salon">Modern Salon</a>
+                        <a href="360_view.html?project=bedroom">Yatak Odası</a>
+                        <a href="360_view.html?project=kitchen">Mutfak</a>
+                    </div>
+                </li>
             </ul>
 
             <ul class="lang-switcher">
@@ -90,25 +98,9 @@
             </div>
             <div><img src="portf/10,1.png" alt="Project 10.1" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div><img src="portf/10.2.png" alt="Project 10.2" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/10.3.png" alt="Project 10.3" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/10.4.png" alt="Project 10.4" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/10.5.png" alt="Project 10.5" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/10.6.png" alt="Project 10.6" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/10.7.png" alt="Project 10.7" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
             <div><img src="portf/11(tr).png" alt="Project 11" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div><img src="portf/11,1.png" alt="Project 11.1" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/11.2.png" alt="Project 11.2" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/11.3.png" alt="Project 11.3" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div><img src="portf/12(tr).png" alt="Project 12" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -134,10 +126,6 @@
             </div>
             <div><img src="portf/14,1.png" alt="Project 14.1" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div><img src="portf/14.2.png" alt="Project 14.2" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/14.3.png" alt="Project 14.3" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
             <div><img src="portf/15(tr).png" alt="Project 15" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div><img src="portf/15,1.png" alt="Project 15.1" style="width: 100%; height: 100%; object-fit: cover;">
@@ -158,10 +146,6 @@
             </div>
             <div><img src="portf/17,3.png" alt="Project 17.3" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div><img src="portf/17.4.png" alt="Project 17.4" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/17.5.png" alt="Project 17.5" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
             <div><img src="portf/18(tr).png" alt="Project 18" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div><img src="portf/18,1.png" alt="Project 18.1" style="width: 100%; height: 100%; object-fit: cover;">
@@ -169,10 +153,6 @@
             <div><img src="portf/19(tr).png" alt="Project 19" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div><img src="portf/19,1.png" alt="Project 19.1" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/19.2.png" alt="Project 19.2" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div><img src="portf/19.3.png" alt="Project 19.3" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div><img src="portf/20(tr).png" alt="Project 20" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -226,6 +206,10 @@
     </div>
 
 </main>
+
+<button id="mobile-zoom-button" style="display:none;" onclick="if(window.openZoom) window.openZoom()">
+    <img src="icons/zoom.png" alt="Tam Ekran Büyüt">
+</button>
 
 <footer>
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
@@ -349,11 +333,8 @@
             resizeTimer = setTimeout(setupFlipbook, 250);
         });
 
-        // 7. GENEL BÜYÜTME İŞLEVİ
-        globalZoomBtn.on('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
+        // 7. GENEL BÜYÜTME İŞLEVİ (Fonksiyon olarak ayrıldı)
+        function openZoom() {
             var currentPageDiv = flipbook.turn('page');
             var view = flipbook.turn('view', currentPageDiv);
             var pageIndex = view.pop() || view.pop();
@@ -365,7 +346,29 @@
                 updateLightboxImage(pageIndex);
                 $(".flipbook").turn("disable", true);
             }
+        }
+        window.openZoom = openZoom; // Global erişim için ekle
+
+        globalZoomBtn.on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openZoom();
         });
+
+        // *** YENİ: MOBİL ZOOM BUTONU İÇİN TIKLAMA OLAYI ***
+        $("#mobile-zoom-button").on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openZoom();
+        });
+
+        // *** MOBİL İÇİN RESME TIKLAYINCA BÜYÜTME ***
+        if ($(window).width() < 768) {
+            $(".flipbook").on("click", "img", function (e) {
+                // Sadece sürükleme değilse (mobilde turn.js click eventini bazen yutar, kontrol edelim)
+                openZoom();
+            });
+        }
 
         // 8. LIGHTBOX NAVİGASYON İŞLEVİ
         lightboxPrevBtn.on('click', function (e) {
