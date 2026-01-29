@@ -8,8 +8,6 @@
     Interactive Digital Catalog & Portfolio
   </p>
 
- 
-
   <a href="https://portfolio.edarch.studio/" target="_blank">
     <img src="https://img.shields.io/badge/LAUNCH_PROJECT-PORTFOLIO.EDARCH.STUDIO-000000?style=for-the-badge&logo=safari&logoColor=white&labelColor=000000" height="40" alt="Visit Portfolio">
   </a>
@@ -70,6 +68,16 @@
   </tr>
 
   <tr>
+    <td colspan="2" align="center" style="padding-bottom: 40px;">
+      <h4 style="letter-spacing: 1px;">🌐 IMMERSIVE 360° SHOWCASE</h4>
+      <a href="https://portfolio.edarch.studio/" target="_blank">
+        <img src="360.png" width="100%" style="border-radius:2px; border:1px solid #ddd; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" alt="360 View">
+      </a>
+      <p style="font-size: 0.8em; color: #888;"><em>Full 360-degree interactive environment integration for architectural visualization</em></p>
+    </td>
+  </tr>
+
+  <tr>
     <td width="30%" valign="top" align="center" style="padding-right: 20px; border-right: 1px solid #eee;">
       <h4 style="letter-spacing: 1px;">MOBILE ADAPTATION</h4>
       <a href="https://portfolio.edarch.studio/" target="_blank">
@@ -95,6 +103,7 @@
 </p>
 
 <ul>
+  <li><strong>🌐 360° Panorama Viewer:</strong> Integrated a custom interactive 360° viewing engine to allow users to explore architectural designs in an immersive virtual space.</li>
   <li><strong>🔍 Custom jQuery Lightbox:</strong> Engineered a custom modal system to allow high-res zooming (a feature missing in the base library).</li>
   <li><strong>📱 Adaptive Layout Engine:</strong> Wrote a resizing script that detects device width and switches between "Double Page" (Desktop) and "Single Page" (Mobile) modes instantly.</li>
   <li><strong>⚡ Performance Optimization:</strong> Implemented asset preloading to ensure high-resolution architectural renders load without lag during page turns.</li>
