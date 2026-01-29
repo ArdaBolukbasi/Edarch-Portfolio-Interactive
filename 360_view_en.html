@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
 
     <style>
-       
         #panorama {
             width: 100%;
             height: 600px;
-           
+
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -30,11 +29,12 @@
                     <li><a href="iletisim_en.html">Contact</a></li>
                     <li><a href="flipbook_en.html">Portfolio</a></li>
                     <li>
-                        <a href="360_view_en.html?project=salon" class="active dropdown-arrow">360 View</a>
+                        <a href="360_view_en.html?project=Noir" class="active dropdown-arrow">360 View</a>
                         <div class="dropdown-content">
-                            <a href="360_view_en.html?project=salon">Modern Living Room</a>
-                            <a href="360_view_en.html?project=bedroom">Bedroom</a>
-                            <a href="360_view_en.html?project=kitchen">Kitchen</a>
+                            <a href="360_view_en.html?project=Noir">Noir Heritage Apartment</a>
+                            <a href="360_view_en.html?project=Blush">Blush Swan Kids Room</a>
+                            <a href="360_view_en.html?project=CoffeeBee">Coffee Bee</a>
+                            <a href="360_view_en.html?project=Grand">Grand Arch Manor</a>
                         </div>
                     </li>
                 </ul>
@@ -74,24 +74,27 @@
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 
     <script>
-        
+
         const urlParams = new URLSearchParams(window.location.search);
         const project = urlParams.get('project');
 
-        
-        let panoramaImage = "image.jpg";
-        let panoramaTitle = "Modern Living Room Design";
 
-        
-        if (project === "bedroom") {
-            panoramaImage = "bedroom.jpg";
-            panoramaTitle = "Bedroom Design";
-        } else if (project === "kitchen") {
-            panoramaImage = "kitchen.jpg";
-            panoramaTitle = "Kitchen Design";
-        } else if (project === "salon") {
-            panoramaImage = "image.jpg";
-            panoramaTitle = "Modern Living Room Design";
+        let panoramaImage = "Noir.jpg";
+        let panoramaTitle = "Noir Heritage Apartment";
+
+
+        if (project === "Noir") {
+            panoramaImage = "Noir.jpg";
+            panoramaTitle = "Noir Heritage Apartment";
+        } else if (project === "Blush") {
+            panoramaImage = "Blush.jpg";
+            panoramaTitle = "Blush Swan Kids Room";
+        } else if (project === "CoffeeBee") {
+            panoramaImage = "CoffeeBee.jpg";
+            panoramaTitle = "COFFEE BEE";
+        } else if (project === "Grand") {
+            panoramaImage = "Grand.jpg";
+            panoramaTitle = "Grand Arch Manor";
         }
 
         pannellum.viewer('panorama', {

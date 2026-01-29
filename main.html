@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
         .proje-bolumu {
             margin-bottom: 80px;
             padding: 40px;
-            background-color: #252525; /* Kart arka planı */
+            background-color: #252525;
+            /* Kart arka planı */
             border-radius: 10px;
         }
 
@@ -20,7 +22,8 @@
             margin-bottom: 20px;
             border-bottom: 2px solid #444;
             padding-bottom: 10px;
-            text-align: left; /* Başlıklar sola hizalı */
+            text-align: left;
+            /* Başlıklar sola hizalı */
         }
 
         .proje-aciklama {
@@ -32,7 +35,8 @@
 
         .galeri-izgara {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive ızgara */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Responsive ızgara */
             gap: 15px;
         }
 
@@ -49,23 +53,38 @@
             .galeri-izgara {
                 grid-template-columns: 1fr;
             }
+
             .proje-bolumu {
                 padding: 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Edarch</a>
+            <a class="logo">Ed’arch Design Studio</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Projeler</a></li>
-                    <li><a href="hakkimda.html">Hakkımda</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
-                    <li><a href="flipbook.html">Kitap Portfolyo</a></li>
+                    <li><a href="index.html">Portfolyo</a></li>
+                    <li>
+                        <a href="360_view.html?project=Noir" class="active dropdown-arrow">360 Görünüm</a>
+                        <div class="dropdown-content">
+                            <a href="360_view.html?project=Noir">Siyah Miras Dairesi</a>
+                            <a href="360_view.html?project=Blush">Pudra Kuğu Çocuk Odası</a>
+                            <a href="360_view.html?project=CoffeeBee">Kafe Bee</a>
+                            <a href="360_view.html?project=Grand">Büyük Kemerli Malikane</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="lang-switcher">
+                    <li><a href="360_view.html" class="active">TR</a></li>
+                    <li><span>/</span></li>
+                    <li><a href="360_view_en.html">EN</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,12 +92,18 @@
 
     <main class="container">
         <h1>Edarch Mimarlık Projeleri</h1>
-        
+
         <section class="proje-bolumu">
             <h2>Modern Lüks Yaşam Alanı / Kaktüslü Bahçe Entegrasyonu</h2>
             <div class="proje-aciklama">
-                <p>Bu projede, yüksek tavanlı geniş bir yaşam alanı tasarlayarak mekana ferahlık kattık. Büyük cam yüzeyler dışarıdaki doğal ışığı ve özel peyzajı içeriye davet ederken, iç mekanda koyu renkli doğal taş ve ahşap dokularla sıcak ve sofistike bir atmosfer yarattık. Özel tasarım avizeler, mekanın merkezinde odak noktası oluşturarak yemek alanını vurguluyor. Fonksiyonellik ve estetik mükemmel bir denge içinde sunulmuştur.</p>
-                <p>Render hizmetimiz, hassas malzeme yansımaları ve optimize edilmiş aydınlatma ile yüksek çözünürlüklü, fotogerçekçi görseller sunarak, müşterilerin hayallerindeki mekanları uygulamadan önce görselleştirmelerine yardımcı olur. **(Son görseldeki yazıdan esinlenilmiştir.)**</p>
+                <p>Bu projede, yüksek tavanlı geniş bir yaşam alanı tasarlayarak mekana ferahlık kattık. Büyük cam
+                    yüzeyler dışarıdaki doğal ışığı ve özel peyzajı içeriye davet ederken, iç mekanda koyu renkli doğal
+                    taş ve ahşap dokularla sıcak ve sofistike bir atmosfer yarattık. Özel tasarım avizeler, mekanın
+                    merkezinde odak noktası oluşturarak yemek alanını vurguluyor. Fonksiyonellik ve estetik mükemmel bir
+                    denge içinde sunulmuştur.</p>
+                <p>Render hizmetimiz, hassas malzeme yansımaları ve optimize edilmiş aydınlatma ile yüksek çözünürlüklü,
+                    fotogerçekçi görseller sunarak, müşterilerin hayallerindeki mekanları uygulamadan önce
+                    görselleştirmelerine yardımcı olur. **(Son görseldeki yazıdan esinlenilmiştir.)**</p>
             </div>
             <div class="galeri-izgara">
                 <img src="resim/2e6c7947-5d6b-4fe3-9de2-107a436de2ed.jpeg" alt="Modern Lüks Salon 1">
@@ -90,7 +115,10 @@
         <section class="proje-bolumu">
             <h2>Minimalist İç Mekan Tasarımı / Sakin Dokular</h2>
             <div class="proje-aciklama">
-                <p>Sadelik ve işlevselliğin ön planda olduğu bu tasarımda, yumuşak, organik dokular ve işlevsel bir yerleşim kullanarak huzurlu ve davetkar bir atmosfer yarattık. Açık renkli ahşap paneller ve entegre depolama çözümleri, mekana kesintisiz bir akış sağlarken, özel aydınlatma senaryoları ile mekanın farklı katmanları ortaya çıkarılmıştır.</p>
+                <p>Sadelik ve işlevselliğin ön planda olduğu bu tasarımda, yumuşak, organik dokular ve işlevsel bir
+                    yerleşim kullanarak huzurlu ve davetkar bir atmosfer yarattık. Açık renkli ahşap paneller ve entegre
+                    depolama çözümleri, mekana kesintisiz bir akış sağlarken, özel aydınlatma senaryoları ile mekanın
+                    farklı katmanları ortaya çıkarılmıştır.</p>
                 <p>Sunduğumuz hizmetler:</p>
                 <ul>
                     <li>Yüksek kaliteli 3D renderlar.</li>
@@ -101,23 +129,29 @@
             </div>
             <div class="galeri-izgara">
                 <img src="resim/renkli koltuklu sahne detay.jpg" alt="Minimalist Oturma Odası 1">
-                </div>
+            </div>
         </section>
-        
+
         <section class="proje-bolumu">
             <h2>Lüks Master Yatak Odası / Koyu Tonlar ve Metal Detaylar</h2>
             <div class="proje-aciklama">
-                <p>Bu yatak odası tasarımı, kahverengi ve altın tonlarının hakim olduğu, cesur ve lüks bir yaklaşımı yansıtır. Yatağın arkasındaki özel kabartma panel ve duvarlardaki parlak yüzeyler, mekana derinlik ve zenginlik katmaktadır. Doğal taş görünümlü sehpalar ve minimalist aydınlatma elemanları, modern şıklığı tamamlamaktadır.</p>
+                <p>Bu yatak odası tasarımı, kahverengi ve altın tonlarının hakim olduğu, cesur ve lüks bir yaklaşımı
+                    yansıtır. Yatağın arkasındaki özel kabartma panel ve duvarlardaki parlak yüzeyler, mekana derinlik
+                    ve zenginlik katmaktadır. Doğal taş görünümlü sehpalar ve minimalist aydınlatma elemanları, modern
+                    şıklığı tamamlamaktadır.</p>
             </div>
             <div class="galeri-izgara">
                 <img src="resim/verde oak residence.jpg" alt="Master Yatak Odası">
             </div>
         </section>
-        
+
         <section class="proje-bolumu">
             <h2>Sanatsal Yemek Odası / Cesur Renk ve Doku Kullanımı</h2>
             <div class="proje-aciklama">
-                <p>Sanat eserini odanın merkezine yerleştirerek tasarlanan bu yemek odası, iddialı bir stil sunar. Koyu kırmızı kadife sandalyeler ve sade mermer masa, güçlü bir kontrast oluşturur. Duvarlardaki klasik çıtalama detayları, modern sanat eseri ile denge kurarak mekana hem tarihi bir dokunuş hem de çağdaş bir canlılık katmıştır.</p>
+                <p>Sanat eserini odanın merkezine yerleştirerek tasarlanan bu yemek odası, iddialı bir stil sunar. Koyu
+                    kırmızı kadife sandalyeler ve sade mermer masa, güçlü bir kontrast oluşturur. Duvarlardaki klasik
+                    çıtalama detayları, modern sanat eseri ile denge kurarak mekana hem tarihi bir dokunuş hem de çağdaş
+                    bir canlılık katmıştır.</p>
             </div>
             <div class="galeri-izgara">
                 <img src="resim/yemek.jpeg" alt="Sanatsal Yemek Odası">
@@ -127,7 +161,10 @@
         <section class="proje-bolumu">
             <h2>Hayal Dünyası Çocuk Odası / Pastel Tonlar ve Eğlenceli Detaylar</h2>
             <div class="proje-aciklama">
-                <p>Çocuğun hayal gücünü beslemek amacıyla tasarlanan bu odada, pastel pembe ve mint yeşili tonları kullanılmıştır. Tavan ve dolaplardaki sevimli desenler, bulut formundaki aydınlatmalar ve zürafa figürü, oyun ve öğrenme için güvenli ve keyifli bir ortam yaratır. Fonksiyonel depolama alanları, düzeni korumaya yardımcı olurken estetikten ödün vermez.</p>
+                <p>Çocuğun hayal gücünü beslemek amacıyla tasarlanan bu odada, pastel pembe ve mint yeşili tonları
+                    kullanılmıştır. Tavan ve dolaplardaki sevimli desenler, bulut formundaki aydınlatmalar ve zürafa
+                    figürü, oyun ve öğrenme için güvenli ve keyifli bir ortam yaratır. Fonksiyonel depolama alanları,
+                    düzeni korumaya yardımcı olurken estetikten ödün vermez.</p>
             </div>
             <div class="galeri-izgara">
                 <img src="resim/pink.jpeg" alt="Çocuk Odası">
@@ -141,4 +178,5 @@
     </footer>
 
 </body>
+
 </html>
