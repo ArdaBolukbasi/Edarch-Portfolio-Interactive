@@ -68,12 +68,22 @@
   </tr>
 
   <tr>
-    <td colspan="2" align="center" style="padding-bottom: 40px;">
+    <td colspan="2" align="center" style="padding-bottom: 20px;">
       <h4 style="letter-spacing: 1px;">🌐 IMMERSIVE 360° SHOWCASE</h4>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" style="padding-bottom: 40px; padding-right: 5px;">
       <a href="https://portfolio.edarch.studio/" target="_blank">
-        <img src="360.jpg" width="100%" style="border-radius:2px; border:1px solid #ddd; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" alt="360 View">
+        <img src="360.jpg" width="100%" style="border-radius:2px; border:1px solid #ddd; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
       </a>
-      <p style="font-size: 0.8em; color: #888;"><em>Full 360-degree interactive environment integration for architectural visualization</em></p>
+      <p style="font-size: 0.75em; color: #888;"><em>Living Area Panorama</em></p>
+    </td>
+    <td width="50%" align="center" style="padding-bottom: 40px; padding-left: 5px;">
+      <a href="https://portfolio.edarch.studio/" target="_blank">
+        <img src="360-2.jpg" width="100%" style="border-radius:2px; border:1px solid #ddd; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </a>
+      <p style="font-size: 0.75em; color: #888;"><em>Bedroom Interior View</em></p>
     </td>
   </tr>
 
@@ -103,7 +113,7 @@
 </p>
 
 <ul>
-  <li><strong>🌐 360° Panorama Viewer:</strong> Integrated a custom interactive 360° viewing engine to allow users to explore architectural designs in an immersive virtual space.</li>
+  <li><strong>🌐 Dual 360° Panorama Support:</strong> Integrated a high-performance interactive 360° engine to render multiple architectural scenes in immersive virtual reality.</li>
   <li><strong>🔍 Custom jQuery Lightbox:</strong> Engineered a custom modal system to allow high-res zooming (a feature missing in the base library).</li>
   <li><strong>📱 Adaptive Layout Engine:</strong> Wrote a resizing script that detects device width and switches between "Double Page" (Desktop) and "Single Page" (Mobile) modes instantly.</li>
   <li><strong>⚡ Performance Optimization:</strong> Implemented asset preloading to ensure high-resolution architectural renders load without lag during page turns.</li>
