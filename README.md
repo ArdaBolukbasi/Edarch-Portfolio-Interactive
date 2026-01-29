@@ -71,7 +71,7 @@
     <td colspan="2" align="center" style="padding-bottom: 40px;">
       <h4 style="letter-spacing: 1px;">🌐 IMMERSIVE 360° SHOWCASE</h4>
       <a href="https://portfolio.edarch.studio/" target="_blank">
-        <img src="360.png" width="100%" style="border-radius:2px; border:1px solid #ddd; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" alt="360 View">
+        <img src="360.jpg" width="100%" style="border-radius:2px; border:1px solid #ddd; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" alt="360 View">
       </a>
       <p style="font-size: 0.8em; color: #888;"><em>Full 360-degree interactive environment integration for architectural visualization</em></p>
     </td>
